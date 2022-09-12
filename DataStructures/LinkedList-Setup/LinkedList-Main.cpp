@@ -48,7 +48,5 @@ int main() {
 	list.displayList();
 	cout << "\n";
 
-}
-
 	return 0;
 }
