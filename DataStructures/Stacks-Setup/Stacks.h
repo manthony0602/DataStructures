@@ -13,3 +13,24 @@ using namespace std;
 // Specification file for Stacks class
 /* Specification file holds the actual class */
 
+class Stack {
+private:
+    int top;
+    int size;
+    int num;
+
+public:
+    // Constructor
+    Stack(int x) {
+        top = -1;
+        size = x;
+    }
+
+    // Stack Operations
+    void push(int);
+    void pop();
+    int isEmpty();
+    int isFull();
+    void showStack();
+};
+#endif
