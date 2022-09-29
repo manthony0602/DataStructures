@@ -11,7 +11,7 @@
 using namespace std;
 
 // Specification file for Hash Map class
-/* Specification file holds the actual class */
+/* Specification file holds the class */
 
 class HashMap {
 private:
