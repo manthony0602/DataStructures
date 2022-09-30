@@ -20,7 +20,6 @@ private:
 		Node* next;  // To point to the next node
 	};
 
-	Node* current;	 // Pointer to the current node
 	Node* front;     // Pointer to the front of the list/queue
 	Node* rear;      // Pointer to the rear of the list/queue
 
@@ -28,14 +27,16 @@ private:
 
 public:
 	// Constructor
-	listQueue(int);
+	listQueue();
 
 	// Linked-List based Queue operations
 	bool isEmpty();
 	bool isFull();
 	void enQueue(double);
 	void deQueue();
+	void makeEmpty();
 	void display();
+	int listCount();
 
 };
 #endif

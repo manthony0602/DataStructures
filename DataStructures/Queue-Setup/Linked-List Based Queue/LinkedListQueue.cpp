@@ -12,27 +12,35 @@ using namespace std;
 // Implementation file for Linked-List based Queue
 /* Implementation file holds the member function definitions that are in the class */
 
-listQueue::listQueue(int x) {
-	front = -1;
-	rear = -1;
-	size = x;
+listQueue::listQueue() {
+	front = rear = NULL;
 };
 
 
 bool listQueue::isEmpty() {
-	if (front == -1 && rear == -1) {
+	if (front && rear == NULL) {
 		return true;
 	}
-	else { return false }
+	else { return false; }
 };
 
 
 bool listQueue::isFull() {
-	if (rear == size - 1) {
-		return true;
+	Node* temp;
+	temp = front;
+
+	if (front == rear) {
+		cout << "The Queue is NOT full.\n";
 	}
 
-	else {return false }
+	while (temp != NULL) {
+		if (temp->data == 0) {
+			return false;
+		}
+		temp = temp->next;
+	}
+
+	return true;
 };
 
 
@@ -41,6 +49,14 @@ void listQueue::enQueue(double item) {
 	newNode = new Node;
 	newNode->data = item;
 	newNode->next = NULL;
+
+	if (front == NULL) {
+		front = rear = newNode;
+	}
+	else {
+		rear->next = newNode;
+		rear = newNode;
+	}
 }
 
 
@@ -51,8 +67,25 @@ void listQueue::deQueue() {
 	}
 	else {
 		temp = front;
+		cout << temp->data;
 		front = front->next;
 		delete temp;
+	}
+}
+
+
+void listQueue::makeEmpty() {
+	Node* temp;
+	temp = front;
+
+	if (temp == NULL) {
+		cout << "The queue is already empty.\n";
+	}
+	else {
+		while (temp != NULL) {
+			delete temp;
+			temp = temp->next;
+		}
 	}
 }
 
@@ -64,5 +97,23 @@ void listQueue::display() {
 		cout << temp->data << ", ";
 		temp = temp->next;
 	}
+	if (listCount() == 0) {
+		cout << "\n";
+		cout << "The Queue is empty. Nothing to display.\n";
+	}
 	cout << "\n";
+}
+
+
+int listQueue::listCount() {
+	Node* temp;
+	temp = front;
+	int count = 0;
+
+	while (temp != NULL) {
+		count++;
+		temp = temp->next;
+	}
+
+	return (count);
 }
