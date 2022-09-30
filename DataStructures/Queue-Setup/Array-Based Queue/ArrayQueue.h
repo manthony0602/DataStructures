@@ -10,6 +10,9 @@
 #define Array_Queue_H
 using namespace std;
 
+
+// Array Queue Implementation still needs fixes/work, not done yet
+
 class arrayQueue {
 private:
 	int front,
@@ -23,9 +26,10 @@ public:
 	// Basic Queue Operations for a Queue
 	bool isEmpty();
 	bool isFull();
-	void enqueue(int val);
-	int dequeue();
-	int count();
+	void enQueue(double);
+	void deQueue();
+	void makeEmpty();
 	void display();
+	int listCount();
 };
 #endif

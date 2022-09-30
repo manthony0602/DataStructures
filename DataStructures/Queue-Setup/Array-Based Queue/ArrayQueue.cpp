@@ -12,12 +12,14 @@ using namespace std;
 // Implementation file for Array-based Queue
 /* Implementation file holds the member function definitions that are in the class */
 
+// Array Queue Implementation still needs fixes/work, not done yet
+
 
 // Constructor for the Array Queue class
-arrayQueue::arrQueue(int x) {
+arrayQueue::arrQueue(int sz) {
 	front = -1;
 	rear = -1;
-	size = x;
+	size = sz;
 
 	// Initializes all array-based elements to 0
 	for (int i = 0; i < size; i++) {

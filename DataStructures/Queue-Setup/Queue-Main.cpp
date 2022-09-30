@@ -12,7 +12,7 @@
 using namespace std;
 
 /* This main function only uses the Linked-List version of a Queue. 
-But thesame can be done with an Array version of a Queue. */
+But the same can be done with an Array version of a Queue. */
 
 int main() {
 
