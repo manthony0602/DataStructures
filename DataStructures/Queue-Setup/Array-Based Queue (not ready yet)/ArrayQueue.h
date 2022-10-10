@@ -16,20 +16,21 @@ using namespace std;
 class arrayQueue {
 private:
 	int front,
-		size,
 		rear,
-		arr[size];
+		count,
+		capacity,
+		arr[];
 
 public:
-	arrQueue(int); // Constructor
+	arrayQueue(int); // Constructor
 
 	// Basic Queue Operations for a Queue
 	bool isEmpty();
 	bool isFull();
 	void enQueue(double);
-	void deQueue();
+	int deQueue();
 	void makeEmpty();
 	void display();
-	int listCount();
+	int getSize();
 };
 #endif

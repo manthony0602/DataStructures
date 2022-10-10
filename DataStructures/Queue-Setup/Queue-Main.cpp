@@ -1,6 +1,7 @@
 // Queue-Setup.cpp : This file contains the 'main' function. Program execution
 // begins and ends there.
 #include "LinkedListQueue.h"
+#include "ArrayQueue.h"
 #include <cmath>
 #include <cstdlib>
 #include <fstream>
@@ -77,7 +78,7 @@ int main() {
 
         case 5:
             cout << "Count Operation\n";
-            cout << "Count of items in Queue : " << q1.listCount() << endl;
+            cout << "Count of items in Queue : " << q1.queueCount() << endl;
             break;
 
         case 6:
@@ -95,6 +96,94 @@ int main() {
         }
 
     } while (option != 0);
+
+    return 0;
+}
+
+
+/* This main function only uses the Linked-List version of a Queue.
+But the same can be done with an Array version of a Queue. */
+
+int main2() {
+    arrayQueue q2(5);
+    int optionQ2;
+    double valueQ2;
+
+    do {
+        cout << "-------------------------------------------------------------\n";
+        cout << "\n";
+        cout << "What operation do you want to perform? Select Option number.\n";
+        cout << "\n";
+
+        cout << "0. Exit Program" << endl;
+        cout << "1. Enqueue()" << endl;
+        cout << "2. Dequeue()" << endl;
+        cout << "3. isEmpty()" << endl;
+        cout << "4. isFull()" << endl;     // isFull() doesnt work correctly yet
+        cout << "5. getSize()" << endl;
+        cout << "6. display()" << endl;
+        cout << "7. makeEmpty()" << endl;  // makeEmpty() doesnt work correctly yet
+
+        cout << "\n";
+        cout << "Option: ";
+        cin >> optionQ2;
+        cout << "\n";
+
+        switch (optionQ2) {
+        case 0:
+            break;
+
+        case 1:
+            cout << "Enqueue Operation \n";
+            cout << "Enter an item to Enqueue in the Queue: ";
+            cin >> valueQ2;
+            q2.enQueue(valueQ2);
+            cout << "*enqueued*\n";
+            break;
+
+        case 2:
+            cout << "Dequeue Operation \n";
+            cout << "Dequeued Value: ";
+            q2.deQueue();
+            cout << "\n";
+            break;
+
+        case 3:
+            if (q2.isEmpty())
+                cout << "Queue is Empty" << endl;
+            else
+                cout << "Queue is not Empty" << endl;
+            break;
+
+        case 4:
+            if (q2.isFull() == true) {
+                cout << "Queue is Full" << endl;
+            }
+            else {
+                cout << "Queue is not Full" << endl;
+            }
+            break;
+
+        case 5:
+            cout << "Count Operation\n";
+            cout << "Count of items in Queue : " << q2.getSize() << endl;
+            break;
+
+        case 6:
+            cout << "Display Function Called: " << endl;
+            q2.display();
+            break;
+
+        case 7:
+            q2.makeEmpty();
+            cout << "*Queue is now empty*\n";
+            break;
+
+        default:
+            cout << "Enter Proper Option number " << endl;
+        }
+
+    } while (optionQ2 != 0);
 
     return 0;
 }

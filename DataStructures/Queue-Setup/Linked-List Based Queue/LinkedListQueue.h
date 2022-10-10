@@ -26,17 +26,16 @@ private:
 	int size;
 
 public:
-	// Constructor
-	listQueue();
+	
+	listQueue(); // Constructor
 
-	// Linked-List based Queue operations
+	// Basic Queue Operations for a Queue
 	bool isEmpty();
 	bool isFull();
 	void enQueue(double);
 	void deQueue();
 	void makeEmpty();
 	void display();
-	int listCount();
-
+	int queueCount();
 };
 #endif

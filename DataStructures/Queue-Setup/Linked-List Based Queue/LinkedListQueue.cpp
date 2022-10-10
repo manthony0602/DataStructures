@@ -97,7 +97,7 @@ void listQueue::display() {
 		cout << temp->data << ", ";
 		temp = temp->next;
 	}
-	if (listCount() == 0) {
+	if (queueCount() == 0) {
 		cout << "\n";
 		cout << "The Queue is empty. Nothing to display.\n";
 	}
@@ -105,7 +105,7 @@ void listQueue::display() {
 }
 
 
-int listQueue::listCount() {
+int listQueue::queueCount() {
 	Node* temp;
 	temp = front;
 	int count = 0;
