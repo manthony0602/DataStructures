@@ -23,7 +23,7 @@ int main() {
 	int searchVal = 11;
 	int position = recursiveLinearSearch(testArray, SIZE, searchVal);
 
-	cout << "* RECURSIVE LINEAR SEARCH FUNCTION *\N";
+	cout << "* RECURSIVE LINEAR SEARCH FUNCTION *\n";
 	cout << "\n";
 	cout << "The array is: ";
 	displayArray(testArray, SIZE);
@@ -31,8 +31,8 @@ int main() {
 	cout << "\n";
 
 
-	if (position != 1) {
-		cout << "The searched value is in position: " << position;
+	if (position != -1) {
+		cout << "The searched value is in index: " << position;
 	}
 	else {
 		cout << "The searched value is not in the array.\n";
@@ -63,7 +63,7 @@ int recursiveLinearSearch(int arr[], int size, int value) {
 
 
 // Implementing extra function to display the array 
-int displayArray(int arr[], int size) {
+void displayArray(int arr[], int size) {
 	for (int i = 0; i < size; i++) {
 		cout << arr[i] << " ";
 	}
