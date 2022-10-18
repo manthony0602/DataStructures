@@ -124,6 +124,10 @@ void NumberList::deleteNode(double num) {
     }
 };
 
+location->previous->next = location->next // david to miriam
+location->next->previous = location->previous; // miriam to david
+delete location;
+
 // This method (which is the constructor) is used to destroy/delete an entire list
 NumberList::~NumberList() {
     ListNode* nodePtr;  // To traverse the list

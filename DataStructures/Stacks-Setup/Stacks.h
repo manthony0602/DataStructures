@@ -17,7 +17,7 @@ class Stack {
 private:
     int top;
     int size;
-    int num;
+    int num[];
 
 public:
     // Constructor

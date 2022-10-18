@@ -29,7 +29,7 @@ bool listQueue::isFull() {
 	Node* temp;
 	temp = front;
 
-	if (front == rear) {
+	if (temp == rear) {
 		cout << "The Queue is NOT full.\n";
 	}
 
