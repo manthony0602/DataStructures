@@ -128,7 +128,7 @@ location->previous->next = location->next // david to miriam
 location->next->previous = location->previous; // miriam to david
 delete location;
 
-// This method (which is the constructor) is used to destroy/delete an entire list
+// This method (which is the destructor) is used to destroy/delete an entire list
 NumberList::~NumberList() {
     ListNode* nodePtr;  // To traverse the list
     ListNode* nextNode; // To point to the next node

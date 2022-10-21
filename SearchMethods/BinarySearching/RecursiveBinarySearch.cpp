@@ -9,6 +9,9 @@
 #include <vector>
 using namespace std;
 
+
+// This is a file with a recursive version of a Binary Search function
+
 // Initializing recurisve binary search function
 int recursiveBinarySearch(int arr[], int first, int last, int value);
 
