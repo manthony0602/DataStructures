@@ -38,7 +38,7 @@ void quickSort(int arr[], int low, int high) {
         int pivot = arr[high];
         int pos = partition(arr, low, high, pivot);
 
-        quickSort(arr, low, pos - 1);
-        quickSort(arr, pos + 1, high);
+        quickSort(arr, low, pos - 1);   // Recursion
+        quickSort(arr, pos + 1, high);  // Recrusion
     }
 };

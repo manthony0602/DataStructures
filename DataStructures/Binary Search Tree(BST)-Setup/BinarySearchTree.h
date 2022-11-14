@@ -18,7 +18,7 @@ private:
     TreeNode* root;
 
 public:
-    TreeType();  // Constructor
+    //TreeType();  // Constructor
     ~TreeType(); // Deconstructor
     TreeType(const TreeType& originalTree);
 
