@@ -14,15 +14,20 @@ using namespace std;
 // Implementation file for an Integer-Type Binary Search Tree
 /* Implementation file holds the member function definitions that are in the class */
 
-// Constructor Implementation
+// Default Constructor Implementation
 TreeType::TreeType() {
     root = NULL;
 }
+
+// Constructor Implementation
+TreeType::TreeType(const TreeType& originalTree) {
+    root = originalTree;
+}
+
 // Destructor Implementation
 TreeType::~TreeType() {
     Destroy(root);
 }
-
 
 
 // Basic Operations for a binary search tree
@@ -69,6 +74,9 @@ void TreeType::Retrieve(TreeNode* tree, int item, bool& found) {
 }
 
 
+int  TreeType::GetLength() {
+    return CountNodes(root);
+}
 
 int TreeType::CountNodes(TreeNode* tree) {
     if (tree == NULL) {

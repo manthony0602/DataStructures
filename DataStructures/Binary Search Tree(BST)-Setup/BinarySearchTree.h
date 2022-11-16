@@ -18,9 +18,9 @@ private:
     TreeNode* root;
 
 public:
-    //TreeType();  // Constructor
+    TreeType();  // Default Constructor
+    TreeType(const TreeType& originalTree);  // Constructor
     ~TreeType(); // Deconstructor
-    TreeType(const TreeType& originalTree);
 
     // Basic Operations for a binary search tree
     void MakeEmpty();
