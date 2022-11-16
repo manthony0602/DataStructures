@@ -157,37 +157,3 @@ void TreeType::Destroy(TreeNode*& tree) {
         delete tree;
     }
 }
-
-
-
-// LeafCount function implementation
-int TreeType::LeafCount(TreeNode* tree) {
-
-    // If the node itself is equal to NULL then it will return 0
-    if (tree == NULL) {
-        return 0;
-    }
-    // If the left and right of the node is equal to NULL, then it will return 1
-    if (tree->left == NULL && tree->right == NULL) {
-        return 1;
-    }
-
-    // Adds up the left side count of leaves and the right side count of leaves together, then returns it
-    return LeafCount(tree->left) + LeafCount(tree->right);
-
-
-
-    // Potential alternative method. Would most likely have to make this a recursive helper function
-    /*int leafCount = 0;
-    if (tree == NULL){
-      return 0;
-    }
-    else{
-      while (tree!= NULL){
-        if (tree->right == NULL && tree->left == NULL){
-          leafCount++;
-        }
-      }
-    }
-    return leafCount;*/
-}

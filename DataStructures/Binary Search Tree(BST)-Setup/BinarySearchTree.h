@@ -44,7 +44,4 @@ public:
     void PrintTree(TreeNode* tree); // Recursive helper function
 
     void Destroy(TreeNode*& tree); // A member function used in the destructor - also a recursive helper function
-
-    // Doesn't work correctly yet
-    int LeafCount(TreeNode* root); // The extended function to count the "leaves" in the Binary Search Tree
 };
