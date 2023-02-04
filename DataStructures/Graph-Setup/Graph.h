@@ -13,6 +13,8 @@ using namespace std;
 // Specification file for NumberList class
 /* Specification file holds the actual class */
 
+/* This template is used to determine what kind of data type the
+vertex is whenever this program takes in data */
 template <class VertexType>
 class GraphType {
 private:

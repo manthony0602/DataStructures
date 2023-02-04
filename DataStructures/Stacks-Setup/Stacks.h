@@ -26,7 +26,7 @@ public:
         size = x;
     }
 
-    // Stack Operations
+    // Basic Stack Operations
     void push(int);
     void pop();
     int isEmpty();

@@ -10,8 +10,9 @@
 using namespace std;
 
 // Implementation file for Stacks
-/* Implementation file hols the member function definitions that are in the class */
+/* Implementation file holds the member function definitions that are in the class */
 
+// Function: pushes elements into the stack
 void Stack::push(int x) {
 	if (isFull()) {
 		cout << "This is Stack Overflow\n";
@@ -22,6 +23,7 @@ void Stack::push(int x) {
 	}
 }
 
+// Function: checks to see if the stack is empty
 int Stack::isEmpty() {
 	if (top == -1) {
 		return 1;  // Returning true
@@ -31,6 +33,7 @@ int Stack::isEmpty() {
 	}
 }
 
+// Function: prints and removes the top element of the stack
 void Stack::pop() {
 	int temp;
 	if (isEmpty()) {
@@ -41,6 +44,7 @@ void Stack::pop() {
 	cout << temp;
 }
 
+// Function: checks to see if the stack is full
 int Stack::isFull() {
 	if (top == (size - 1)) {
 		return 1;   // Returning true
@@ -50,6 +54,7 @@ int Stack::isFull() {
 	}
 }
 
+// Function: prints all values within the stack
 void Stack::showStack() {
 	if (top >= 0) {
 		for (int i = top; i >= 0; i--) {
