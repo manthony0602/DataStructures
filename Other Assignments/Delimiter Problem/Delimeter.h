@@ -14,8 +14,7 @@ using namespace std;
 /* The program should take in a string and make sure that it has
    been delimted properly. So if its a braces-delimeted string, it should 
    start and end with braces "{}" - so on and so forth with the 
-   other delimiters (braces{}, parentheses(), brackets[])
-*/
+   other delimiters (braces{}, parentheses(), brackets[]) */
 
 // Specification file for Stacks class
 /* Specification file holds the actual class */

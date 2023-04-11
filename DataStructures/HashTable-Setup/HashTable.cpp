@@ -1,4 +1,3 @@
-
 #include "HashTable.h"
 #include <cmath>
 #include <cstdlib>
