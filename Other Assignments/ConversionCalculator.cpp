@@ -27,10 +27,10 @@ int binaryToDecimal(string x);
 void decimalToBinary(int x);
 
 string hexadecimalToBinary(string x);
-string hexToBinHelper(char c); // Helper Function
+string hexToBinHelper(char c);    // Helper Function
 
 string binaryToHexadecimal(string x);
-string binToHexHelper(string s); // Helper Function
+string binToHexHelper(string s);  // Helper Function
 
 
 
@@ -55,7 +55,7 @@ int main() {
         cout << setw(2) << "0: Exit Program.\n";
         cout << "\n";
 
-        // User Input for what they'd like to do
+        // Prompt the user for a conversion operation
         cout << "Select Option: ";
         cin >> userChoice;
         cout << "\n";
@@ -201,11 +201,11 @@ int main() {
 
 // Function definition for converting Decimal Values to Binary
 void decimalToBinary(int x) {
-    int binaryNum[32];        // An array to store the Binary Value
+    int binaryNum[32];          // An array to store the Binary Value
     int i = 0;
     while (x > 0) {
-        binaryNum[i] = x % 2; // Array holds the remainder value of x being divided by 2
-        x = x / 2;            // x is divided by 2 since its a BINARY value, just like in DR method
+        binaryNum[i] = x % 2;   // Array holds the remainder value of x being divided by 2
+        x = x / 2;              // x is divided by 2 since its a BINARY value, just like in DR method
         i++;
     }
 
@@ -227,8 +227,8 @@ int binaryToDecimal(string x) {
     // The loop reads the string from right to left, just like in positional notation, 
     // and then carries out the same multiplication process (1^i * 1) or (1^i * 0)
     for (int i = stringSize - 1; i >= 0; i--) {
-        if (x[i] == '1') {                // If the binary bit is equal to 1, then it will multiply it
-            convertedVal += (1 << power); // Bitwise operator that shifts bits to the left
+        if (x[i] == '1') {                  // If the binary bit is equal to 1, then it will multiply it
+            convertedVal += (1 << power);   // Bitwise operator that shifts bits to the left
         }
         power++;
     }
@@ -246,7 +246,7 @@ string hexadecimalToBinary(string x)
 
 
     for (int i = 0; i < userValLength; i++) {
-        convertedVal += hexToBinHelper(x[i]); // Use of helper function to convert each hex value
+        convertedVal += hexToBinHelper(x[i]);   // Use of helper function to convert each hex value
     }
     return convertedVal;                        // Returns the binary value as a string
 };
@@ -282,6 +282,7 @@ string hexToBinHelper(char c)
 // Function definition for converting Binary to Hexadecimal
 string binaryToHexadecimal(string x) {
     // xSize will always be 8 because the prompt forces the user to make an 8-bit entry
+    // But xSize is here to allow for flexibility with the user's entry
     int xSize = x.length();
     string convertedVal, firstHalf, secondHalf;
 
