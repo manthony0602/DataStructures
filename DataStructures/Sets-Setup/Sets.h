@@ -1,8 +1,18 @@
-#include "Map.h"
-// File Map.h must include a definition of ItemType and a function named
-// "map" that maps an item of ItemType into an index between 0 and max-1
-// if the parameterized constructor is used and between 0 and 399 if the 
-// default constructor is used
+#include <cmath>
+#include <cstdlib>
+#include <fstream>
+#include <iomanip>
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
+#ifndef Sets_H
+#define Sets_H
+using namespace std;
+
+// Specification file for Sets class
+/* Specification file holds the actual class and its contents*/
+
 
 class SetType {
 private:
@@ -29,6 +39,5 @@ public:
 	SetType Union(SetType setB);
 	SetType Intersection(SetType setB);
 	SetType Difference(SetType setB);
-	
-
 };
+#endif
